@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'css/style.css' %">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
 
@@ -16,10 +16,10 @@
 
 <body>
     <nav>
-        <img src="img/logo.png" alt="">
+        <img src="{% static 'img/logo.png' %}" alt="">
         <div id="divPesq">
             <input type="text" id="text" placeholder="Digite sua busca...">
-            <button id="btnBusca"></button>
+            <!-- <button id="btnBusca"></button> -->
         </div>
         <a href="">Home</a>
         <a href="">Adote</a>
@@ -37,6 +37,22 @@
             
         </div>
     </header>
+        
+            <aside>
+                <div class="card">
+                    <img id='uma' src="{% static 'img/dog1.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
+                            em </p>
+                    <img src="{% static 'img/dog2.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
+                            em </p>
+                    <img src="{% static 'img/dog3.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
+                            em </p>
+                    <img src="{% static 'img/gato1.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
+                            em </p>
+                    
+                </div>
+        
+        
+            </aside>
 
     <section>
         <div id='divSomos'>
@@ -54,28 +70,9 @@
                 </p>
             </div>
         </div>
-        <img src='img/adote2.jpg' alt="">
+        <img src="{% static 'img/adote2.jpg' %}" alt="">
 
     </section>
-    <!-- <aside>
-        <div>
-            <div>
-
-                <div id="divCao">
-                    <img src="img/dog.png" alt="">
-                    <input type="radio" name="cão">Cachorro
-                </div>
-                    <div id="divGato">
-                        <img src="img/cat.png" alt="">
-                        <input type="radio" name="gato">Gato
-                    </div>
-                    
-
-        </div>
-            </div>
-
-
-    </aside> -->
     <footer></footer>
 
 </body>
