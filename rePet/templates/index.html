@@ -16,7 +16,7 @@
 
 <body>
     <nav>
-        <img src="{% static 'img/logo.png' %}" alt="">
+        <img src="{% static 'img/logo.png' %}" alt="" id='logo'>
         <div id="divPesq">
             <input type="text" id="text" placeholder="Digite sua busca...">
             <!-- <button id="btnBusca"></button> -->
@@ -37,22 +37,50 @@
             
         </div>
     </header>
-        
-            <aside>
-                <div class="card">
-                    <img id='uma' src="{% static 'img/dog1.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
-                            em </p>
-                    <img src="{% static 'img/dog2.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
-                            em </p>
-                    <img src="{% static 'img/dog3.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
-                            em </p>
-                    <img src="{% static 'img/gato1.jpg' %}" alt=""><p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
-                            em </p>
-                    
+        <div>
+
+            <form>
+                <!-- <input type="radio" name="Animal" value="Cachorro" id='d'> -->
+                <!-- <img src="{% static 'img/dog(2).png' %}" alt=""> -->
+                <!-- <input type="radio" name="Animal" value="Gato" id='c'>  -->
+                    <!-- <img src="{% static 'img/cat(1).png' %}" alt=""><p></p> -->
+                    <select name="" id="idade">
+                        <option value="">Selecione a Idade</option>
+                        <option value="">2 meses a 1 ano</option>
+                        <option value="">Até 2 anos</option>
+                        <option value="">3 anos</option>
+                        <option value="">4 anos</option>
+                     <option value="">5 anos</option>
+                    </select>
+                <select name="" id="cidade">
+                    <option value="">Seleciona sua Cidade</option>
+                    <option value="">Minas Gerais</option>
+                    <option value="">São Paulo</option>
+                    <option value="">Rio de Janeiro</option>
+                </select>
+                <input type="checkbox">Pequeno
+                <input type="checkbox">Grande
+                <input type="checkbox">Médio
+            </form>
+        </div>
+            
+    <aside>
+                     
+            {% for Animal in animais %}
+            
+            <div class="card">
+                <div>
+                    <img src="{{Animal.foto.url}}" alt="">
                 </div>
-        
-        
-            </aside>
+                <h3>{{Animal.nome}}</h3>
+                <p>Tamanho: {{Animal.tamanho}}</p>
+                <p>Idade: {{Animal.idade}}</p>
+                
+            </div>
+        {% endfor %}
+
+
+     </aside>
 
     <section>
         <div id='divSomos'>
