@@ -28,3 +28,12 @@ class Animal(models.Model):
 
     def __str__(self):
         return self.nome
+
+class Cadastro(models.Model):
+
+    nome = models.CharField(max_length=30)
+    sobrenome = models.CharField(max_length=100)
+    email = models.EmailField()
+    senha = models.CharField(max_length=50)
+    telefone = models.CharField(max_length=15)
+    endereco = models.CharField(max_length=100)
