@@ -12,7 +12,32 @@
   <script defer src="{% static 'js/scripts.js' %}"></script>
 </head>
 <body>
-    <!-- BARRINHA NAV -->
+    
+    <section>
+
+        {% if msg %}    
+        <p>{{ msg }}</p>
+        {% endif %}
+        <form method='POST'>
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Cadastrar</button>
+        </form>        
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- BARRINHA NAV -->
     <!-- <nav> 
         <a href="#">ajudar</a>
         <a href="#">cuidar</a>
@@ -45,16 +70,3 @@
       <img src="{% static 'imagem/icons8-gmail-64.png' %}" alt="">
       <img src="{% static 'imagem/facebook.png' %}" alt="">
     </aside> -->
-    <section>
-
-        {% if msg %}    
-        <p>{{ msg }}</p>
-        {% endif %}
-        <form method='POST'>
-            {% csrf_token %}
-            {{ form }}
-            <button type="submit">Fazer Pedido</button>
-        </form>        
-    </section>
-</body>
-</html>

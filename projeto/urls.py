@@ -22,6 +22,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.mostrar_index),
-    # path('Cadastro/', views.mostrar_cadastro),
     path('Cadastro/', views.mostrar_cadastro),
+    path('login/',views.login_user),
+    path('login/submit',views.submit_login),
+    path('', views.mostrar_index)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

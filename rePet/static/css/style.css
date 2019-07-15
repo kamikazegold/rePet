@@ -79,7 +79,7 @@ header{
     background-attachment: cover;
     background-image: url('img/header3.jpeg'); 
     opacity: 0.9  ; */
-    height: 650px;
+    height: 600px;
     width: 90%;
     margin-left: 5%;
     /* margin-left: 5%; */
@@ -465,7 +465,6 @@ section #div{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    overflow-y: scroll;
 }
 .pets img{
     display: flex;
