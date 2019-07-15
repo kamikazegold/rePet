@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from rePet.models import Animal
-from rePet.forms import CadastroForm
+from rePet.models import Animal, Cadastro, Usuario
+from rePet.forms import CadastroForm, LoginUsuario
 
 # Create your views here.
 

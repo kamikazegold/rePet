@@ -9,100 +9,159 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
-
-
+    
+    
     <title>Teste</title>
 </head>
 
 <body>
+    
+    
     <nav>
         <img src="{% static 'img/logo.png' %}" alt="" id='logo'>
-        <div id="divPesq">
-            <input type="text" id="text" placeholder="Digite sua busca...">
-            <!-- <button id="btnBusca"></button> -->
-        </div>
-        <a href="">Home</a>
+        <a href="">Inicio</a>
+        <a href="#Por que Adotar?">Por que Adotar?</a>
         <a href="">Adote</a>
-        <a href="">Seja um Doador</a>
-        <a href="">Quem Somos</a>
-        <a href="">ONG's</a>
+        <a href="/Cadastro">Seja um Doador</a>
+        <a href="#Quem Somos">Quem somos</a>
+        <button type="submit" id='login'>Login</button>
     </nav>
+    
     <header>
         
         <div id='divTexto'>
             <h1>Seja feliz <br> adotando um amigo!</h1>
         </div>
         <div id='divBotao'>
-            <button>CADASTRE-SE</button>
-            
+            <button type="submit">CADASTRE-SE</button>
         </div>
     </header>
-        <div>
+    
+    
+    <!-- <input type="radio" name="Animal" value="Cachorro" id='d'> -->
+    <!-- <img src="{% static 'img/dog(2).png' %}" alt=""> -->
+    <!-- <input type="radio" name="Animal" value="Gato" id='c'>  -->
+    <!-- <img src="{% static 'img/cat(1).png' %}" alt=""><p></p> -->
+    <!-- <select name="" id="idade">
+        <option value="">Selecione a Idade</option>
+        <option value="">2 meses a 1 ano</option>
+        <option value="">Até 2 anos</option>
+        <option value="">3 anos</option>
+        <option value="">4 anos</option>
+        <option value="">5 anos</option>
+    </select>
+    <select name="" id="cidade">
+        <option value="">Seleciona sua Cidade</option>
+        <option value="">Minas Gerais</option>
+        <option value="">São Paulo</option>
+        <option value="">Rio de Janeiro</option>
+    </select>
+    <input type="checkbox">Pequeno
+    <input type="checkbox">Grande
+    <input type="checkbox">Médio
+</form> -->
 
-            <form>
-                <!-- <input type="radio" name="Animal" value="Cachorro" id='d'> -->
-                <!-- <img src="{% static 'img/dog(2).png' %}" alt=""> -->
-                <!-- <input type="radio" name="Animal" value="Gato" id='c'>  -->
-                    <!-- <img src="{% static 'img/cat(1).png' %}" alt=""><p></p> -->
-                    <select name="" id="idade">
-                        <option value="">Selecione a Idade</option>
-                        <option value="">2 meses a 1 ano</option>
-                        <option value="">Até 2 anos</option>
-                        <option value="">3 anos</option>
-                        <option value="">4 anos</option>
-                     <option value="">5 anos</option>
-                    </select>
-                <select name="" id="cidade">
-                    <option value="">Seleciona sua Cidade</option>
-                    <option value="">Minas Gerais</option>
-                    <option value="">São Paulo</option>
-                    <option value="">Rio de Janeiro</option>
-                </select>
-                <input type="checkbox">Pequeno
-                <input type="checkbox">Grande
-                <input type="checkbox">Médio
-            </form>
-        </div>
-            
-    <aside>
-                     
+<aside>
+    
+    <div>
+        <form>
+            <input type="search" id="pesquisa" oninput="limpar()">
+            <button type="button" onclick="filtrar()">Buscar</button>
+            <ul id="lista">
+                <!-- <li>Ana <img src="download.jpg" alt=""></li>
+                    
+                    <li>Mariana</li>
+                    <li>Banana</li>
+                    <li>Celular</li>
+                    <li>Smartphone</li>
+                    <li>Dumbphone</li>
+                    <li>Tablet</li>
+                    <li>Phablet</li>
+                    <li>Laptop</li>
+                    <li>Top-down</li> -->
+                </ul>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                <script type="text/javascript">
+                    
+                    function filtrar() {
+                        let termo = $('#pesquisa').val().toUpperCase();
+                        $('#lista li').each(function () {
+                            if ($(this).html().toUpperCase().indexOf(termo) === -1) {
+                                $(this).hide();
+                            }
+                        });
+                    }
+                </script>
+            </div>
             {% for Animal in animais %}
             
-            <div class="card">
-                <div>
-                    <img src="{{Animal.foto.url}}" alt="">
+            <ul>
+                <li>
+                    
+                    
+                    <div class="card">
+                        <div>
+                            <img src="{{Animal.foto.url}}" alt="">
+                        </div>
+                        <h3>{{Animal.nome}}</h3>
+                        <p>Tamanho: {{Animal.tamanho}}</p>
+                    </li>
+                    <p>Idade: {{Animal.idade}}</p>
+                    
                 </div>
-                <h3>{{Animal.nome}}</h3>
-                <p>Tamanho: {{Animal.tamanho}}</p>
-                <p>Idade: {{Animal.idade}}</p>
-                
-            </div>
-        {% endfor %}
-
-
-     </aside>
-
-    <section>
-        <div id='divSomos'>
-            <h2>Quem Somos?</h2>
-            <div id='divSobre'>
-                <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
-                        em
-                        "Editar Texto" ou clicar duas vezes sobre mim e você</p> poderá adicionar o seu próprio conteúdo
-                    e
-                    trocar fontes. <p>Sinta-se à vontade para arrastar e soltar em qualquer lugar em sua página.</p>
-                </p>
-                <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
-                        em
-                       
-                </p>
-            </div>
+            </ul>
+            {% endfor %}
+            
+            
+        </aside>
+        
+        <div id='adotar'>
+            
+            <h3 id='Por que Adotar?'> <span>Por que adotar?</span></h3>
         </div>
-        <img src="{% static 'img/adote2.jpg' %}" alt="">
-
-    </section>
-    <footer></footer>
-
-</body>
-
-</html>
+        
+        <div id='section2'>
+            <div>
+                <img src="{% static 'img/teste4.png' %}" alt="" id='icon'><p>Ao adotar, você ajuda a reduzir o número de cães e gatos abandonados. Os animais de rua já passaram por
+                    muito sofrimento e tudo o que precisam é de um lar para serem felizes de verdade!</p>
+                </div>
+                <div>
+                    <img src="{% static 'img/teste6.png' %}" alt="" id='icon'>
+                    <p>E não há recompensa maior do que vê-los se transformarem naquela coisinha alegre e saudável depois de
+                        receberem uma boa dose de cuidado e carinho.</p>
+                    </div>
+                    <div>
+                        <img src="{% static 'img/teste5.png' %}" alt="" id='icon'>
+                        <p>Pensando bem, a pergunta é outra: se você pode mudar o destino de um animal carente, por que você não
+                            faria isso?</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <section>
+                        <div id='divSomos'>
+                            <h2 id='Quem Somos'>Quem Somos?</h2>
+                            <div id='divSobre'>
+                                <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
+                                    em
+                                    "Editar Texto" ou clicar duas vezes sobre mim e você</p> poderá adicionar o seu próprio conteúdo
+                                    e
+                                    trocar fontes. <p>Sinta-se à vontade para arrastar e soltar em qualquer lugar em sua página.</p>
+                                </p>
+                                <p>Sou um parágrafo. Clique aqui para editar e adicionar o seu próprio texto.<p> É fácil! Basta clicar
+                                    em
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <img src="{% static 'img/adote2.jpg' %}" alt="">
+                        
+                    </section>
+                    
+                    
+                    <footer>
+                        <p>RODAPÉ</p>
+                    </footer>
+                </body>
+                
+                </html>

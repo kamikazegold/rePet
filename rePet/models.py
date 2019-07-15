@@ -37,3 +37,7 @@ class Cadastro(models.Model):
     senha = models.CharField(max_length=50)
     telefone = models.CharField(max_length=15)
     endereco = models.CharField(max_length=100)
+
+class Usuario(models.Model):
+    email = models.EmailField()
+    senha = models.CharField(max_length=50)
