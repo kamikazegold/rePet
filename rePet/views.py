@@ -16,6 +16,7 @@ def mostrar_index(request):
     return render(request, 'index.html', {'animais': animais})
 
 def mostrar_cadastro(request):
+    cad = Cadastro.objects.all()
     formulario = CadastroForm(request.POST or None)
     msg =''
 
@@ -26,9 +27,9 @@ def mostrar_cadastro(request):
     
     contexto = {
         'form': formulario,
-        'msg': msg
+        'msg': msg,
     }
-    return render(request, 'cadastro.html', contexto)
+    return render(request, 'cadastro.html', contexto, {'cad': cad})
 
 
 @login_required(login_url='/login/')
