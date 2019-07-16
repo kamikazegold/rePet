@@ -32,7 +32,7 @@
                       {% endfor %}
 
                   {% endif %}
-          <button type="submit" class="btn btn-primary">Entrar</button>
+          <a href="/adote"> <button type="submit" class="btn btn-primary">Entrar</button></a>
       </div>
     </div>
   </form>
@@ -40,17 +40,7 @@
 
     <section>
 
-        {% if msg %}    
-        <p>{{ msg }}</p>
-        {% endif %}
-        
-        
-        <form method='POST'>
-            {% csrf_token %}
-            {{Cadastro.nome}}
-            <button type="submit">Cadastrar</button>
-        </form>        
-        
+       
     </section>
 
 </body>

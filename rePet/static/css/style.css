@@ -430,13 +430,12 @@ p{
 }
 
 li:hover{
-    box-shadow: 2px 2px 5px 5px rgba(255, 166, 0, 0.685);
-    background-color: white;
-    transition: 0.5s;
+    box-shadow: 2px 2px 5px 5px white;
+    transition: 1s;
     border-radius: 20%;
     cursor: pointer;
-    height: 220px;
-    width: 220px;
+    height: 200px;
+    width: 200px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -609,4 +608,43 @@ footer h5{
 
 }
 
+.container{
+    height: 800px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+}
+.container img{
+    margin-left: 10%;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 350px;
+    width: 600px;
+}
 
+.imagem div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: orange;
+    height: 400px;
+    width: 1500px;
+    text-align: center;
+    
+}
+
+.textin h6{
+    font-family: 'Comfortaa', cursive;
+    font-size: 15pt;
+    flex-direction: column;
+    border-radius: 10px;
+text-align: center;
+padding-top: 50px;
+    height: 200px;
+    width: 300px;
+    background-color: white;
+}

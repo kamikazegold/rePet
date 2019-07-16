@@ -10,3 +10,8 @@ body{
 .container input{
   height: 50px;
 }
+
+div .adot{
+  height: 100px;
+  width: 100px;
+}
