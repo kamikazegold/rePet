@@ -9,8 +9,11 @@ body{
         #fafafa 5px
         );
         overflow-x: hidden;
-    }
+}
 
+html{
+        scroll-behavior: smooth;
+}
 nav{
     display: flex;
     justify-content: space-around;
@@ -22,24 +25,29 @@ nav{
     -moz-box-shadow: inset 0px 6px 12px -5px rgba(0,0,0,0.46);
     box-shadow: inset 0px 6px 12px -5px rgba(0,0,0,0.46);
     position: fixed;
-
+    border-top: 1px solid orange;
 }
 nav a{
     color: black;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 13pt;
     text-decoration: none;
+    padding-right: 30px;
+    cursor: pointer;
 }
 
 nav a:hover{
     color: #f18a15;
     font-size: 15pt;
     transition: 0.4s;
+    cursor: pointer;
     
 }
 nav img{
     /* padding-top: 40px; */
     /* padding-right: 30%; */
     height: 100%;
+    cursor: pointer;
 }
 
 #divPesq{
@@ -80,8 +88,7 @@ header{
     background-image: url('img/header3.jpeg'); 
     opacity: 0.9  ; */
     height: 600px;
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
     /* margin-left: 5%; */
     background-color: black;
     display: flex;
@@ -91,7 +98,7 @@ header{
 	top: 9%; 
 	bottom:25%; 
 	/* right:55%; */
-	background-image: url("../img/header3.jpeg")  ;
+	background-image: url("../img/header6.jpg")  ;
 	/* box-shadow:0 2px 5px #000;  */
 	/* background-size: 100% 100%; */
 }
@@ -100,8 +107,8 @@ header{
 #divTexto h1{
     display: flex;
     align-items: center;
-    margin: 10% 0 0.5% 3%;
-    color: white;
+    margin: 10% 70% 0.5% 3%;
+    color: #e78843;
     font-family: 'Amatic SC', cursive;
     font-weight: 100 bolder;
     font-size: 50pt;
@@ -147,6 +154,7 @@ header{
 } */
 
 #login{
+    cursor: pointer;
     margin-left: 3%;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
@@ -181,7 +189,7 @@ header{
 button{
     
     
-    
+    cursor: pointer;
     margin-left: 3%;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
@@ -221,8 +229,7 @@ button{
     text-align: center;
     text-transform: unset;
     flex-direction: column;
-    
-    
+
 }
 
 h2{
@@ -233,6 +240,13 @@ h2{
 
 #divSobre{
     font-size: 11pt;
+    height: 100px;
+    width: 400px;
+
+}
+
+section p{
+    font-size: 16pt;
 }
 
 
@@ -246,20 +260,21 @@ h2{
 
 
 form{
-    margin-top: 50px;
-    margin-left: 25%;
+    margin-top: 300px;
+    margin-left: 10%;
     height: 100px;
-    width: 50%;
+    width: 80%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: ;
+    
     border-radius: 20px;
 }
 
 form img{
     width: 50px;
     height: 50px;
+    display: flex;
 }
 
 /* #Busca{
@@ -269,7 +284,7 @@ form img{
     border: solid 1px #000201;
 } */
 
-#idade{
+/* #idade{
     width: 150px;
     height: 30px;
     border-radius: 10px ;
@@ -288,21 +303,72 @@ select{
 
 }
 
+
+
 aside{
-    height: 300px;
+    height: 200px;
     width: 70%;
-    margin-left: 15%;
-    margin-top: 2%;
-    padding-bottom: 100px;
+    margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #f4ece1;
     flex-wrap: wrap;
-
-    
+    margin-right: 15%;
+    margin-left: 15%;
 }
 
+aside img {
+    flex-wrap: wrap;
+    height: 50px;
+    width: 50px;
+} */
+
+#lista{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+#lista img{
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+}
+
+aside #busca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#pesquisa{
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+
+aside ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+ul {
+    list-style-type: none;
+    }
+
+.bot{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    
+}
 
 /* aside div{
     height: 400px;
@@ -363,10 +429,31 @@ p{
     cursor: pointer;
 }
 
+li:hover{
+    box-shadow: 2px 2px 5px 5px rgba(255, 166, 0, 0.685);
+    background-color: white;
+    transition: 0.5s;
+    border-radius: 20%;
+    cursor: pointer;
+    height: 220px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+
+li p{
+    text-align: center;
+    
+}
+
+
 aside img{
     height: 100px;
     width: 100px;
-    box-shadow: 2px 2px 6px black;
 }
 
 p{
@@ -381,10 +468,10 @@ p{
     align-items: center;
     background-color: white;
     padding-bottom: 100px;
+    
 }
 
 #section2 div{
-    font-size: 3rem;
     flex-direction: column;
     align-items: center;
     width: 350px;
@@ -397,26 +484,37 @@ p{
     align-items: center;
     justify-content: center;
     padding-bottom: -30px;
+    
 }
 
 #adotar h3{
     font-family: 'Amatic SC', cursive;
     color: black;
     font-size: 60pt;
+    
+    
 }
 p{
-    font-size: 1.6rem;
-    font-size: 15pt;   
+    font-size: 14pt;   
 }
 
 #icon{
     width: 360px;
     height: 360px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#icon:hover{
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+
 }
 
 section{
     height: 400px;
-    padding-top: 40px;
+    padding-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -457,39 +555,58 @@ section #div{
 }
 
 .pets{
-    height: 600px;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    height: 500px;
+    border-radius: 10px;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
 }
 .pets img{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 200px;
     width: 200px;
-    background-color: white;
     flex-wrap: wrap;
     border-radius: 20px;
-    padding-bottom: 10px
+    cursor: pointer;
 }
 
 .pets p{
     text-align: center;
+    font-size: 10pt;
 }
 
 
 footer{
-    height: 100px;
+    height: 120px;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-footer p{
-    color: white;
-    font-size: 32pt;
+footer img{
+    margin-top: 5px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    
 }
+
+footer h5{
+    color: white;
+    font-size: 10pt;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+

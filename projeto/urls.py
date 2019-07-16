@@ -25,5 +25,6 @@ urlpatterns = [
     path('Cadastro/', views.mostrar_cadastro),
     path('login/',views.login_user),
     path('login/submit',views.submit_login),
-    path('', views.mostrar_index)
+    path('', views.mostrar_index),
+    path('Adote/', views.mostrar_adote)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

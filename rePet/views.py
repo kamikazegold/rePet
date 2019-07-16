@@ -15,6 +15,9 @@ def mostrar_index(request):
     animais = Animal.objects.all()
     return render(request, 'index.html', {'animais': animais})
 
+def mostrar_adote(request):
+    return render(request, 'adote.html')
+
 def mostrar_cadastro(request):
     cad = Cadastro.objects.all()
     formulario = CadastroForm(request.POST or None)

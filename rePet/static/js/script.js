@@ -1,8 +1,11 @@
-function filtrar() {
-                var termo = $('#pesquisa').val().toUpperCase();
-                $('#lista li').each(function() { 
-                   if($(this).html().toUpperCase().indexOf(termo) === -1) {
-                       $(this).hide();
-                   }
-                });
+let nav = document.getElementById('nav');
+window.addEventListener("scroll", function(event) {
+            if(window.pageYOffset>100){
+
+                nav.style.background = "#007bff";
+
             }
+            else{
+                nav.style.background = "transparent";
+            }
+        });

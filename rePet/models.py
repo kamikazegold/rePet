@@ -7,21 +7,21 @@ from django.contrib.auth.models import User
 class Animal(models.Model):
 
     animal_tamanho = [
-        ('pp', 'Porte Pequeno'),
-        ('pm', 'Porte Médio'),
-        ('pg', 'Porte Grande'),
+        ('Porte Pequeno', 'Porte Pequeno'),
+        ('Porte Médio', 'Porte Médio'),
+        ('Porte Grande', 'Porte Grande'),
     ]
 
     animal_idade = [
-        ('0', 'De 2 a 6 meses'),
-        ('1', '1 Ano'),
-        ('2', '2 anos'),
-        ('3', '3 anos'),
-        ('4', '4 anos'),
-        ('5', '5 anos'),
-        ('6', '6 anos'),
-        ('7', '7 anos'),
-        ('8', '8 anos'),
+        ('De 2 a 6 meses', 'De 2 a 6 meses'),
+        ('1 ano', '1 ano'),
+        ('2 anos', '2 anos'),
+        ('3 anos', '3 anos'),
+        ('4 anos', '4 anos'),
+        ('5 anos', '5 anos'),
+        ('6 anos', '6 anos'),
+        ('7 anos', '7 anos'),
+        ('8 anos', '8 anos'),
     ]
     nome = models.CharField(max_length=30)
     tamanho = models.CharField(max_length=20, choices=animal_tamanho)
